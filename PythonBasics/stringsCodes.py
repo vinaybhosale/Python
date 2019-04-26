@@ -5,15 +5,15 @@ class stringDemo:
     print(len(name))
 
     # to find char occurences
-    # char = "google"
-    # print(char[0])
-    # dict = {}
-    # for ele in char:
-    #     if ele not in dict:
-    #         dict[ele] = 1
-    #     else:
-    #         dict[ele] += 1
-    # print(dict)
+    char = "google"
+    print(char[0])
+    dict = {}
+    for ele in char:
+        if ele not in dict:
+            dict[ele] = 1
+        else:
+            dict[ele] += 1
+    print(dict)
 
     # list = []
     # game = "tricketttt"
@@ -27,7 +27,7 @@ class stringDemo:
     # name = "vinay"
     # print(name[3:])
 
-    # checks whether a string ends with ing if yes tghen adds ly or else adds ing
+    # checks whether a string ends with ing if yes then adds ly or else adds ing
     def add_char_to_string(self, string):
         add_ing_string = "ing"
         add_ly_string = "ly"

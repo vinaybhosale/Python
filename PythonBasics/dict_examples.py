@@ -16,15 +16,15 @@ class dict_examples:
     print(sample_dict)
 
     # addition of two or more dictionaries
-    dic1 = {1:10 , 2:20}
-    dic2 = {3:30 , 4:40}
-    dic3 = {5:50 , 6:60}
+    dic1 = {1: 10, 2: 20}
+    dic2 = {3: 30, 4: 40}
+    dic3 = {5: 50, 6: 60}
 
-    def Merge(dic1,dic2,dic3):
+    def Merge(self, dic1, dic2, dic3):
         dic3.update(dic1)
         return (dic3.update(dic2))
 
-    print(Merge(dic1,dic2,dic3))
+    print(Merge(dic1, dic2, dic3))
     print(dic3)
 
     #iterating over dictionary using for loop

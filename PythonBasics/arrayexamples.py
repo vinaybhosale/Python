@@ -12,16 +12,8 @@ class array_examples:
 
     # finding number of occurences of an element
 
-    # reverse_arr_data = [1, 2, 3, 4, 5, 2, 2, 1]
-    # count = 0
-    # for element in reverse_arr_data:
-    #     if element == 2:
-    #             count += 1
-
-    # print(count)
-
     @staticmethod
-    def findOccurence(value):
+    def findoccurence(value):
         value = int(input("enter the number to search : "))
         reverse_arr_data = [1, 2, 3, 4, 5, 2, 2, 1]
         count = 0
@@ -32,7 +24,7 @@ class array_examples:
 
     # to find first occurence of an element in array
     @staticmethod
-    def firstOccurence(value):
+    def firstoccurence(value):
         value = int(input("enter the number to find : "))
         arr_data = [1, 2, 3, 4, 5, 2, 2, 1]
         count = 0
@@ -41,9 +33,11 @@ class array_examples:
                 arr_data.remove(element)
                 print("loop breaked")
                 print("array after removing element : ", arr_data)
+
+    print("vinay", end=" ")
         
-print(array_examples.findOccurence(""))
-print(array_examples.firstOccurence(""))
+print(array_examples.findoccurence(""))
+print(array_examples.firstoccurence(""))
 # reverse_arr_data = [1,2,3,4,5,2,2,1]
 
 
