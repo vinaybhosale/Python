@@ -12,11 +12,13 @@ class scalarmultiplication:
         for ele_c in range(c):
             ROW.append(int(input()))
         A.append(ROW)
+        print(range(len(A)))
 
     #print the matrice
     for ele_r in range(len(A)):
 
         for ele_c in range(len(A[0])):
+            print(len(A[0]))
             B[ele_r][ele_c] = A[ele_r][ele_c] * scalar
         print("Scalar Multiplied matrice : ",B)
 

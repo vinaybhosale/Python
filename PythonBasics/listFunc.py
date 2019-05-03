@@ -91,9 +91,8 @@ class listFunc:
         return result
 
 
-
 lfobject = listFunc()
-print(lfobject.compare_list([1,2,3,45] , [8,9,6,45]))
+print(lfobject.compare_list([1, 2, 3, 45], [8, 9, 6, 45]))
 # lfobject.alllistfunc()
 # listdata = [1,2,3,4,5]
 # print(lfobject.join_list_data(listdata))
