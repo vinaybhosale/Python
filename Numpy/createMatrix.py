@@ -1,7 +1,8 @@
 import numpy as np
 
 
-class createMatrix:
+class numpyBasics:
+
 
     def matrix_with_numpy(self):
         sample_list = [(2, 3, 4), (5, 6, 7), (8, 9, 10)]
