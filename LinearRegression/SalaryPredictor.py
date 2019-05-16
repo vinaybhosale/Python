@@ -15,6 +15,7 @@ class SalaryPredictor:
 
     #Splitting the data in training data and testing data
     from sklearn.model_selection import train_test_split
+    # RegressionModel = train_test_split(x, y, test_size=10, random_state=0)
     x_data_train, x_data_test, y_data_train, y_data_test = train_test_split(x_data, y_data, test_size=10, random_state=0)
 
     #simple linear regression
@@ -22,7 +23,7 @@ class SalaryPredictor:
     linearModel = LinearRegression()
     linearModel.fit(x_data_train, y_data_train)
     predicted_data = linearModel.predict(x_data_test)
-    print("Predicted data is : ",predicted_data)
+    print("Predicted data is : ", predicted_data)
 
     #plot the training data on a scatter
     plot.scatter(x_data_train, y_data_train, color='red')
