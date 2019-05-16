@@ -15,8 +15,8 @@ class DataTrainer(DataController):
         DataController.__init__(self, LinearRegressionDataModel.RegressionModel)
 
     def trainUserData(self):
-        linearDataModel = LinearRegression()
 
+        linearDataModel = LinearRegression()
         dataset = DataController.read_split_data(self)
         print("Data Set : ", dataset)
         dataset = LinearRegressionDataModel.RegressionModel(*dataset)
