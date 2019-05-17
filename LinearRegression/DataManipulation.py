@@ -38,8 +38,15 @@ class DataController(object):
                 test_data.to_csv('test_data_file.csv', header=True, index=None)
 
                 data_set = pd.read_csv('train_data_file.csv')
-                x = data_set.iloc[:, :-1].values
-                y = data_set.iloc[:, 1].values
+                print("Inside Data Manipulation : ", type(data_set))
+
+                independent_variable = ("Mention the independent variable : ")
+                x = data_set.columns.get_loc(independent_variable)
+                dependent_variable = ("Mention the dependent variable : ")
+                y = data_set.columns.get_loc(dependent_variable)
+
+                # x = data_set.iloc[:, :-1].values
+                # y = data_set.iloc[:, 1].values
 
                 if data_set['Salary'].isnull().sum() > 0:
                     x = x.fillna(x.mean())

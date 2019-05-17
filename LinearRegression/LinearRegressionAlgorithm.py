@@ -4,7 +4,7 @@ from sklearn.linear_model import LinearRegression
 from Python.LinearRegression.PickleModel import *
 from sklearn.metrics import r2_score
 import matplotlib.pyplot as plot
-import pickle
+
 
 """  DataTrainer is Child class Derived from DataController Class   """
 class DataTrainer(DataController):
@@ -29,19 +29,14 @@ class DataTrainer(DataController):
         """
             Now Calculate the accuracy of the model
         """
+
         dataAccuracy = r2_score(dataset.yTest, predicted_data)
         print("Accuracy of the model is : ", dataAccuracy)
-
-        filename = input("Enter the desired file name : ")
-        file_extension = '.pkl'
-        pickle_model_name = filename + file_extension
-        linear_regression_data_model = open(pickle_model_name, 'wb')
-        pickle.dump(linearDataModel, linear_regression_data_model)
-        linear_regression_data_model.close()
-
-        # Loading pickle model to predict y data from test_data.csv
-        linear_regression_data_model = open(pickle_model_name, 'rb')
-
+        #
+        # if dataAccuracy > 0.95:
+        #     datatrainer.create_Pickle(linearDataModel)
+        # else:
+        #     datatrainer.trainUserData()
 
         """
              calling methods for drawing Graph       
@@ -52,7 +47,6 @@ class DataTrainer(DataController):
         # Plotting Test Data
         DataTrainer.PlotGraph(self, linearDataModel, dataset.xTest, dataset.yTest)
 
-
     # Method to draw a graph
     def PlotGraph(self, linearDataModel, x_data, y_data):
         plot.scatter(x_data, y_data, color='Red')
@@ -61,6 +55,11 @@ class DataTrainer(DataController):
         plot.xlabel("Years Of Experience")
         plot.ylabel("Salary")
         plot.show()
+
+    @staticmethod
+    def create_Pickle(linearDataModel):
+        print("Inside Create Pickle : ", linearDataModel)
+        PickleFileController.dump_Trained_Model(linearDataModel)
 
 
 datatrainer = DataTrainer()
