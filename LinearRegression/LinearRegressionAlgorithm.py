@@ -14,6 +14,7 @@ class DataTrainer(DataController):
         # Passing Model To Parent Class
         DataController.__init__(self, LinearRegressionDataModel.RegressionModel)
 
+
     def trainUserData(self):
 
         linearDataModel = LinearRegression()
@@ -32,11 +33,6 @@ class DataTrainer(DataController):
 
         dataAccuracy = r2_score(dataset.yTest, predicted_data)
         print("Accuracy of the model is : ", dataAccuracy)
-        #
-        # if dataAccuracy > 0.95:
-        #     datatrainer.create_Pickle(linearDataModel)
-        # else:
-        #     datatrainer.trainUserData()
 
         """
              calling methods for drawing Graph       
