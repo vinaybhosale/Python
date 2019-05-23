@@ -19,5 +19,5 @@ class PickleFileController:
         # Loading pickle model to predict y data from test_data.csv
         linear_regression_data_model = open(pickle_model_name, 'rb')
 
-#
+
 # PickleFileController.dump_Trained_Model()
